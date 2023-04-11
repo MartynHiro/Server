@@ -11,7 +11,7 @@ public class Client {
              PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
              BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
-            final String cityFromServer = reader.readLine();
+            String cityFromServer = reader.readLine();
             System.out.println("Последний введенный город был: " + cityFromServer);
 
             try (Scanner scanner = new Scanner(System.in)) {
